@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html ng-app="llama_app">
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="materialize-v0.97.6/materialize/css/materialize.min.css" media="screen,projection"
+  />
+  <link type="text/css" rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <!--<script src="angular.min.js"></script>-->
+  <script src="index.js"></script>
+  <script src="angular.min.js"></script>
+
+  <script src="action.js"></script>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<nav class="green darken-4">
+  <div class="nav-wrapper">
+    <ul>
+      <li> <i class="material-icons">toys</i></li>
+      <li> <a href="#!" class="brand-logo">Llama power</a></li>
+
+    </ul>
+    <ul class="right hide-on-med-and-down">
+      <!--<a class="waves-effect waves-light btn-large  green modal-trigger" >Calculate the Llama power now!!!</a></li>-->
+      <li><button data-target="modal1" class="green waves-effect waves-light btn-large modal-trigger" onclick="">Calculate the Llama power now!!!</button></li>
+      <!--<li><a href="sass.html"><i class="material-icons">search</i></a></li>-->
+      <li><a class='dropdown-button' href="#" data-activates='dropdown1' data-beloworigin="true"><i class="material-icons">view_module</i></a></li>
+      <!--<li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>-->
+      <!--<li><a href='#' data-activates='dropdown1'><i class="material-icons">more_vert</i></a></li>-->
+    </ul>
+  </div>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a data-target="modal2" class="modal-trigger">AboutMe</a></li>
+    <li><a data-target="modal3" class="modal-trigger">Website</a></li>
+    <li><a data-target="modal4" class="modal-trigger">Contact </a></li>
+  </ul>
+
+</nav>
+
+
+<body class="bg" ng-controller="llama_controller">
+  <div class="llama">
+
+
+    <!--slider-->
+    <div class="slider">
+      <ul class="slides">
+        <li>
+          <img src="1.jpg">
+          <!-- random image -->
+          <div class="caption center-align">
+            <h3>Llama poop is sellable !</h3>
+            <h5 class="light grey-text text-lighten-3">Llama Brew is a LA-based company that sells llama poop as an all-natural fertilizer. Their tagline: "What makes Llama Brew? Llama's poo!"</h5>
+          </div>
+        </li>
+        <li>
+          <img src="2.jpg">
+          <!-- random image -->
+          <div class="caption left-align">
+            <h3>llamas are used as guards.</h3>
+            <h5 class="light grey-text text-lighten-3">Ain't nobody f-cking with your clique. Llamas guard fields from animals like "coyotes, dogs, and foxes."</h5>
+          </div>
+        </li>
+        <li>
+          <img src="3.jpg">
+          <!-- random image -->
+          <div class="caption right-align">
+            <h3>Llamas can carry 50 pounds for 20 miles in one day.</h3>
+            <h5 class="light grey-text text-lighten-3"> Leave the packing to the heavier, stronger llamas!</h5>
+          </div>
+        </li>
+        <li>
+          <img src="5.jpg">
+          <!-- random image -->
+          <div class="caption center-align">
+            <h3>If you put too much weight on a llama, it will refuse to move.</h3>
+            <h5 class="light grey-text text-lighten-3">Llamas ain't got time for that so don't give them a heavy burden. Llamas may also "spit, hiss, or even kick at their owners until their burden is lessened," says National Geographic.</h5>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>Llama Power Calculator</h4>
+        <p>Enter all the values to calculate the Llama power!!!!!!!!!!</p>
+
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">insert_emoticon</i>
+                <input id="icon_prefix" type="text" class="validate" ng-model="num">
+                <label for="icon_prefix">Number of llamas:</label>
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">insert_emoticon</i>
+                <input id="icon_telephone" type="tel" class="validate" ng-model="age">
+                <label for="icon_telephone">Average age: (Years) </label>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">insert_emoticon</i>
+                <input id="icon_prefix" type="text" class="validate" ng-model="length">
+                <label for="icon_prefix">Average fur length: (inches) </label>
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">insert_emoticon</i>
+                <input id="icon_telephone" type="tel" class="validate" ng-model="neck_length">
+                <label for="icon_telephone">Average neck length:(inches) </label>
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">insert_emoticon</i>
+                <input id="icon_prefix" type="text" class="validate" ng-model="velocity">
+                <label for="icon_prefix">Average spit velocity: (mph)</label>
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">insert_emoticon</i>
+                <input id="icon_telephone" type="tel" class="validate" ng-model="level">
+                <label for="icon_telephone">Average attitude level:</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="power_button">
+          <a class="green waves-effect waves-light btn-large" ng-click="power()">Calculate the Llama power!!!</a>
+
+        </div>
+        <div class="show_answer">
+          <p class="power">Llama Power: {{p}} tons of TNT!</p>
+          <!--<img class="llama_power" src="10.jpg">-->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+      </div>
+    </div>
+
+    <!-------------------------------------------------------------------------------------->
+
+    <!-- Modal Structure -->
+    <div id="modal2" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>About me</h4>
+        <p>
+          My name is Piyusha Zanjad. I am a graduate student of computer science studying at california state university fullerton.
+          My goal is to seek a challenging position in the field of web developement. To create this website, I have used
+          the latest and best web technologies to make it more modern and user friendly. What excites me about the web developement
+          is that, it is constantly changing and continously new innovations are evolving. To learn the latest technologies one needs
+          to be a quick learner as the technologies are continously updating. Also, the way to improve things and make it better has no limits.
+          This is the reason, which develops more interest in me to be in the field of web development.
+        </p>
+        <img class="cal" src="calstate.jpg">
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+      </div>
+    </div>
+
+    <!-------------------------------------------------------------------------------------->
+
+    <!-- Modal Structure -->
+    <div id="modal3" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>About the website</h4>
+        <p>To create this webiste, I have used the latest technologies. I have used MaterializeCSS for the responsive UI design,
+          compatible for both desktop and mobile devices. I have used HTML5, CSS3 , AngularJS, JQuery to make my website
+          look beautiful and responsive to user input.</p>
+
+        <div class="row">
+          <div class="images">
+            <img src="angular.png" height="150px" width="150px">
+            <img src="html5.png" height="150px" width="150px">
+            <img src="css.png" height="150px" width="150px">
+            <img src="jquery.png" height="150px" width="150px">
+            <img src="materialize.png" height="150px" width="150px">
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+      </div>
+    </div>
+    <!------------------------------------------------------>
+    <!-- Modal Structure -->
+    <div id="modal4" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>Send your information!</h4>
+        <br>
+        <br>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">Last Name</label>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">email</i>
+                <input id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">phone</i>
+                <input id="icon_telephone" type="tel" class="validate">
+                <label for="icon_telephone">Telephone</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="send"><br>
+          <br>
+          <a class="green waves-effect waves-light btn-large">Send your contact info</a>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------------------->
+    <!--cards-->
+    <!--<div class="row">
+        <div class="col s3">
+          <div class="card medium">
+            <div class="card-image">
+              <img src="6.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>Though llama power is correlated to certain physical attributes the true origin of a llama's power remains a mystery. Llama power can only be harnessed by the most innovative companies and they frequently use it to spawn new ideas.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>-->
+    <div class="row">
+      <div class="col s3">
+        <div class="card small">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="6.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Llamas can reach speeds up to 35mph. 
+<i class="material-icons right">more_vert</i></span>
+            <!--<p><a href="#">This is a link</a></p>-->
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+            <p class="fun_fact">Funny fact about Llama: <br>Though llama power is correlated to certain physical attributes the true origin of
+              a llama's power remains a mystery. Llama power can only be harnessed by the most innovative companies and they
+              frequently use it to spawn new ideas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s3">
+        <div class="card small">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="7.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Llamas sound like a car starting.<i class="material-icons right">more_vert</i></span>
+            <!--<p><a href="#">This is a link</a></p>-->
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+            <p class="fun_fact">Funny fact about Llama: <br>Llamas draw their mystical powers from their fur, neck length, spit velocity, and
+              many other unknown sources.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col s3">
+        <div class="card small">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="8.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Llamas have three stomachs!<i class="material-icons right">more_vert</i></span>
+            <!--<p><a href="#">This is a link</a></p>-->
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+            <p class="fun_fact">Funny fact about Llama: <br>Llamas are thought to be the most powerful creatures in the universe, their maximum
+              power remains unknown.A female llama with a male camel can sometimes crossbreed to form a hybrid creature called
+              a "cama," which just so happens to mean bed in Spanish.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s3">
+        <div class="card small">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="9.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Llama + Camel = Cama<i class="material-icons right">more_vert</i></span>
+            <!--<p><a href="#">This is a link</a></p>-->
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+            <p class="fun_fact">Funny fact about Llama: <br>Most importantly, never mess with a Llama!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--card end  -->
+
+  </div>
+  <footer class="page-footer green darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">If Llama has come into your Dream</h5>
+          <p class="grey-text text-lighten-4">To see a this mammal in your dreams can represent the deep trust and faith you have in your own personal journey.
+            This animal is symbolizing that you have the strength and endurance to reach your goal. Alternatively this creature
+            could also be putting you on notice that you are worrying too much and carrying to large a load.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h6 class="white-text">In this situation you need to come from the heart and emotional body in a loving and very caring manner. Delicacy is in required.
+-Llama</h6>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2014 Copyright Piyusha Zanjad
+        <!--<a class="grey-text text-lighten-4 right" href="#!">More Links</a>-->
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="materialize-v0.97.6/materialize/js/materialize.min.js"></script>
+
+</body>
+
+</html>
